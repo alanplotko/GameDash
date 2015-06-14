@@ -1,0 +1,17 @@
+{
+  "name": "game-dash",
+  "productName": "GameDash",
+  "identifier": "com.gamedash",
+  "description": "A dashboard that displays the user's gaming activity.",
+  "version": "0.1.0",
+  "author": "Alan Plotko",
+  "main": "main.js",
+  "config": {
+    "target": "development"
+  },
+  "dependencies": {
+    "fs-jetpack": "^0.6.4",
+    "jquery": "^2.1.4",
+    "materialize-css": "^0.96.1"
+  }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>GameDash</title>
+
+    <link href="node_modules/materialize-css/bin/materialize.css" rel="stylesheet" type="text/css">
+
+    <script src="vendor/electron_boilerplate/env_config.js"></script>
+    <script src="vendor/electron_boilerplate/context_menu.js"></script>
+    <script src="vendor/electron_boilerplate/external_links.js"></script>
+
+    <script src="vendor/require.js"></script>
+    <script>
+        requirejs(['app']);
+    </script>
+
+</head>
+<body>
+    <include src="includes/nav.html"></include>
+
+    <div class="container">
+        <div id="env-name"></div>
+    </div>
+
+    <script>
+        requirejs(['node_modules/jquery/dist/jquery.min'], function (jQuery) {
+            try {
+                global.window.$ = global.window.jQuery = module.exports;
+            } catch(e) {}
+            requirejs(['node_modules/materialize-css/bin/materialize']);
+        });
+    </script>
+</body>
+</html>
